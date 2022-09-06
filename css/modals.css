@@ -1,0 +1,346 @@
+.popup {
+  position: fixed;
+  z-index: 100000;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  transition: opacity 0.5s linear;
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.popup.is-active {
+  pointer-events: auto;
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup__wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.popup__inner {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 50px 15px;
+}
+
+.popup__content {
+  background-color: #fff;
+  max-width: 760px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.btn-close {
+  border: none;
+  cursor: pointer;
+  background: none;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  transition: transform 0.2s linear;
+  transition: opacity 0.2s linear;
+  position: absolute;
+  top: -45px;
+  right: -15px;
+}
+@media (max-width: 600px) {
+  .btn-close {
+    top: -40px;
+  }
+}
+
+.btn-close::before,
+.btn-close::after {
+  content: "";
+  background-color: #fff;
+  height: 25px;
+  width: 3px;
+  position: absolute;
+  border-radius: 10px;
+  top: 8px;
+}
+
+.btn-close::before {
+  transform: rotate(45deg);
+}
+
+.btn-close::after {
+  transform: rotate(-45deg);
+}
+
+.btn-close:hover {
+  transform: scale(1.1);
+}
+
+.btn-close:active {
+  transform: scale(0.9);
+  opacity: 0.8;
+}
+
+.mobile-btn {
+  display: none;
+}
+
+#third__modal {
+  background: url("../img/modal/modal-03.png") 100% 0 no-repeat, #f5f5f5;
+}
+#second__modal {
+  background: url("../img/modal/modal-02.png") 100% 0 no-repeat,
+    url("../img/modal/modal-02back.png") 100% 0 no-repeat, #fff;
+}
+#first__modal {
+  background: url("../img/modal/modal-01.png") 100% 0 no-repeat, #f5f5f5;
+}
+.popup-presentation__content {
+  background: #ffffff;
+  box-shadow: 0px 4px 70px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  max-width: 951px;
+  position: relative;
+}
+
+.popup-presentation__item {
+  padding: 50px 0 49px 52px;
+}
+
+.popup-presentation__title {
+  font-family: "Inter", sans-serif;
+  max-width: 442px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 26px;
+}
+.popup-presentation__title.second {
+  margin-bottom: 10px;
+  max-width: 510px;
+}
+.popup-presentation__descr {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 120%;
+  color: #2b2b2b;
+  margin-bottom: 25px;
+  max-width: 458px;
+}
+.modal__button-container {
+  max-width: 380px;
+}
+.modal__button {
+  width: 100%;
+  padding: 26px 42px;
+}
+
+.popup-presentation__form {
+  max-width: 380px;
+  border: none;
+  padding: 6px 0 0 0;
+}
+.popup-presentation__form-field {
+  margin-bottom: 16px;
+}
+.popup-presentation__form-field > *:not(:last-child) {
+  margin-bottom: 8px;
+}
+.popup-presentation__form-field input:nth-child(3) {
+  margin-bottom: 26px;
+}
+.form__input{
+  border-bottom: 2px solid #464646;
+  border-radius: 10px;
+  padding: 27.5px 0 27.5px 54px;
+  width: 238px;
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 200;
+  font-size: 12px;
+  line-height: 155%;
+  color: #464646;
+}
+.popup-presentation__form-field input {
+  border-bottom: 2px solid #464646;
+  border-radius: 10px;
+  padding: 23.5px 0 23.5px 57px;
+  width: 100%;
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 200;
+  font-size: 12px;
+  line-height: 155%;
+  color: #464646;
+}
+.form__input-phone {
+  background: url("../img/form/phone.svg") 21px 20px no-repeat,
+    rgba(70, 70, 70, 0.1);
+}
+.form__input-email {
+  background: url("../img/form/email.svg") 21px 20px no-repeat,
+    rgba(70, 70, 70, 0.1);
+}
+.form__input-name {
+  background: url("../img/form/person.svg") 21px 20px no-repeat,
+    rgba(70, 70, 70, 0.1);
+}
+.modal__policy {
+  display: flex;
+}
+.modal__policy .policy__tick {
+  margin-right: 7px;
+  margin-top: 2px;
+}
+.modal__policy p {
+  font-family: "Rubik", sans-serif;
+  max-width: 361px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 120%;
+  color: #181818;
+}
+
+@media (max-width: 1023px) {
+  #third__modal {
+    background: #f5f5f5;
+  }
+  #second__modal {
+    background: #f5f5f5;
+  }
+  #first__modal {
+    background: #f5f5f5;
+  }
+  .popup-presentation__item {
+    padding: 35px 20px;
+  }
+  .popup-presentation__content {
+    max-width: 750px;
+  }
+  .popup-presentation__title {
+    font-size: 28px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #000000;
+    margin: 0 auto 26px auto;
+    text-align: center;
+    max-width: 700px;
+  }
+  .popup-presentation__descr {
+    margin: 0 auto 25px auto;
+    text-align: center;
+  }
+  .popup-presentation__form {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 767px) {
+  .popup-presentation__title {
+    font-size: 21px;
+  }
+  .popup-presentation__content {
+    max-width: 600px;
+  }
+  .popup-presentation__descr {
+    font-size: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .popup-presentation__title {
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+  .popup-presentation__descr {
+    font-size: 14px;
+  }
+  .modal__button {
+    max-width: 100%;
+    padding: 20px 12px;
+  }
+  .modal__button .btn {
+    font-size: 14px;
+  }
+  .popup-presentation__form-field input:nth-child(3) {
+    margin-bottom: 20px;
+  }
+  .modal__policy p {
+    max-width: 200px;
+  }
+}
+
+.priv-policy {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 25px;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+}
+
+.priv-policy__title {
+  padding-bottom: 35px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.priv-policy__subtitle,
+.priv-policy__text {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.priv-policy__list {
+  padding-left: 25px;
+  list-style: none;
+}
+
+.priv-policy__item {
+  padding-bottom: 5px;
+}
+
+.form__policy.from__policy-modal p {
+  padding: 0px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #848484;
+}
+.form__policy.from__policy-modal p span {
+  color: rgb(37, 127, 231);
+  text-decoration: underline;
+}
+.form__policy.from__policy-modal p span:hover {
+  text-decoration: none;
+}
+
+.popup-presentation__item-text > h2 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #009f9a;
+}
+.politicy-close {
+  text-decoration: underline;
+}
+@media (max-width: 600px) {
+  .priv-policy__title {
+    padding-bottom: 20px;
+    font-size: 17px;
+}
+}
